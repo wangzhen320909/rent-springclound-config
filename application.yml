@@ -7,9 +7,25 @@ spring:
   profiles: dev     #开发环境
   application: 
     name: microservicecloud-config-atguigu-dev
+eureka:
+  instance:
+    hostname: eureka5001.com #冒号后面必须要有空格
+  client:
+    register-with-eureka: false #当前的eureka-server自己不注册进服务列表中
+    fetch-registry: false #不通过eureka获取注册信息
+    service-url:
+      defaultZone: http://eureka5001.com:5001/eureka/
 ---
 spring:
   profiles: test   #测试环境
   application: 
     name: microservicecloud-config-atguigu-test
+eureka:
+  instance:
+    hostname: eureka5001.com #冒号后面必须要有空格
+  client:
+    register-with-eureka: false #当前的eureka-server自己不注册进服务列表中
+    fetch-registry: false #不通过eureka获取注册信息
+    service-url:
+      defaultZone: http://eureka5001.com:5001/eureka/
 #  请保存为UTF-8格式
