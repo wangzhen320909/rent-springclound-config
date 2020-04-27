@@ -8,7 +8,7 @@ server:
 
 eureka:
   client: 
-    service-url:
+    service-url: 
       defaultZone: http://eureka1:5001/eureka
 spring:
   profiles: test
@@ -55,7 +55,7 @@ mybatis:
     - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
 eureka: 
   client: 
-    service-url:
+    service-url: 
       defaultZone: http://eureka1:5001/eureka
   instance:
     instance-id: operconfigprovider6001
